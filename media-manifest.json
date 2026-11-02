@@ -1,0 +1,89 @@
+{
+  "note": "V3 uses temporary public RK Derawala Instagram renditions plus one clearly decorative generated illustration. Replace Instagram renditions with approved original media when supplied. Post links are durable source references; Instagram CDN URLs expire.",
+  "assets": [
+    {
+      "file": "/media/red-textile.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DXWxR6fiVEy/",
+      "description": "Red printed textile hanging among leaves",
+      "usedFor": "Hero",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/derawala-family.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/p/C5qOO55SAPu/",
+      "description": "Ram Kishore Chhipa with family members before indigo printed cloth",
+      "usedFor": "Story, interactive craft journal and international enquiry panel",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/workshop-printing.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DON9j5dkR6j/",
+      "description": "Person hand printing a striped pattern in the workshop",
+      "usedFor": "Process and design enquiry panel",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/padma-shri-ceremony.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/p/C9mlWExSHLb/",
+      "description": "Padma Shri award ceremony image shared by RK Derawala",
+      "usedFor": "Recognition",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/printed-textile.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DYUObvFRo3u/",
+      "description": "Earth-toned printed textile against a stone wall",
+      "usedFor": "Textile gallery and personal enquiry panel",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/printed-cloth-detail.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DOVfTxLkVVC/",
+      "description": "Multiple hand block printed motifs on pale cloth",
+      "usedFor": "Textile gallery, interactive craft journal and motif study",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/floral-archive.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/p/C7ZC-fGSKCT/",
+      "description": "Floral printed textile beneath an open craft publication",
+      "usedFor": "Textile gallery",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/instagram-logo.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/",
+      "description": "Public profile image, floral identity mark",
+      "usedFor": "Header, footer, loader and favicon",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/printing-blocks.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DWYxGp0CTgq/",
+      "description": "Reel cover showing wooden printing blocks, including Instagram play overlay",
+      "usedFor": "Process explorer, linked reel and interactive craft journal",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/hand-printing.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/reel/DX6qfSFs-G2/",
+      "description": "Reel cover showing hands printing cloth, including Instagram play overlay",
+      "usedFor": "Linked reel",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/indigo-drying.jpg",
+      "source": "https://www.instagram.com/rkderawala_bagru/p/DW1O2bxEa1K/",
+      "description": "Indigo printed cloth outdoors; original thumbnail includes embedded text",
+      "usedFor": "Process explorer and interactive craft journal",
+      "replaceWithOriginal": true
+    },
+    {
+      "file": "/media/heritage-illustration.jpg",
+      "source": "AI-generated decorative artwork using built-in image generation on 2026-11-02",
+      "description": "Illustrative paper background with botanical block-print motifs and an imagined courtyard arch; not a photograph of RK Derawala or Bagru",
+      "usedFor": "Decorative heritage interlude",
+      "replaceWithOriginal": false
+    }
+  ]
+}
