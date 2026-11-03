@@ -1,11 +1,23 @@
 {
-  "note": "V3 uses temporary public RK Derawala Instagram renditions plus one clearly decorative generated illustration. Replace Instagram renditions with approved original media when supplied. Post links are durable source references; Instagram CDN URLs expire.",
+  "note": "The original V3 structure remains. V4 keeps its navigation and adds an edited, credited Bagru craft film behind the hero, alongside temporary RK Derawala Instagram images. Replace Instagram renditions and stock film with approved brand originals when supplied.",
   "assets": [
+    {
+      "file": "/video/bagru-block-printing.mp4",
+      "poster": "/video/bagru-block-printing-poster.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
+      "creator": "Incredible India",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "modifications": "A 15-second excerpt beginning around 00:48 was trimmed, muted, resized to 1280 pixels wide and encoded to H.264 MP4. Poster extracted around 00:56.",
+      "description": "Documentary footage of hand block printing in Bagru. It shows a separate workshop and is not footage of RK Derawala.",
+      "usedFor": "Hero video",
+      "replaceWithOriginal": true
+    },
     {
       "file": "/media/red-textile.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DXWxR6fiVEy/",
       "description": "Red printed textile hanging among leaves",
-      "usedFor": "Hero",
+      "usedFor": "Hero floating image and textile gallery",
       "replaceWithOriginal": true
     },
     {
@@ -40,7 +52,7 @@
       "file": "/media/printed-cloth-detail.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DOVfTxLkVVC/",
       "description": "Multiple hand block printed motifs on pale cloth",
-      "usedFor": "Textile gallery, interactive craft journal and motif study",
+      "usedFor": "Hero floating image, textile gallery, interactive craft journal and motif study",
       "replaceWithOriginal": true
     },
     {
@@ -75,7 +87,7 @@
       "file": "/media/indigo-drying.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/p/DW1O2bxEa1K/",
       "description": "Indigo printed cloth outdoors; original thumbnail includes embedded text",
-      "usedFor": "Process explorer and interactive craft journal",
+      "usedFor": "Hero floating image and process",
       "replaceWithOriginal": true
     },
     {

@@ -32,11 +32,19 @@ export default function Home() {
 
       <main id="main">
         <section className="hero-v3" id="top" aria-labelledby="hero-title">
-          <Image className="hero-photo cover-image" src="/media/red-textile.jpg" alt="Red hand printed textile hanging among leaves in Bagru" fill loading="eager" fetchPriority="high" sizes="100vw" />
+          <div className="hero-video-stage" aria-hidden="true">
+            <Image src="/video/bagru-block-printing-poster.jpg" alt="" fill fetchPriority="high" sizes="100vw" className="cover-image" />
+            <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/video/bagru-block-printing-poster.jpg">
+              <source src="/video/bagru-block-printing.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div className="hero-shade" aria-hidden="true" />
           <div className="hero-topline"><span>Hand block printing / Bagru</span><span>Rajasthan, India</span></div>
+          <figure className="hero-float hero-float-one"><Image src="/media/printed-cloth-detail.jpg" alt="Close view of hand printed floral motifs on cloth" fill sizes="(max-width: 700px) 32vw, 16vw" /><figcaption>Motif / Memory</figcaption></figure>
+          <figure className="hero-float hero-float-two"><Image src="/media/red-textile.jpg" alt="Red hand printed textile hanging among leaves" fill sizes="(max-width: 700px) 30vw, 15vw" /><figcaption>Cloth / Colour</figcaption></figure>
+          <figure className="hero-float hero-float-three"><Image src="/media/indigo-drying.jpg" alt="Indigo printed cloth drying in Bagru" fill sizes="(max-width: 700px) 34vw, 17vw" /><figcaption>From Bagru</figcaption></figure>
           <div className="hero-main"><p className="hero-kicker">A living textile tradition</p><h1 id="hero-title"><span>Printed by hand.</span><span><em>Held in memory.</em></span></h1><p>Colour, cloth and generations of knowledge—impressed one block at a time.</p><a className="light-link" href="#story">Enter the story <span aria-hidden="true">↗</span></a></div>
-          <div className="hero-bottomline"><span>RK Derawala · Bagru</span><a href="#story">Scroll to discover <span aria-hidden="true">↓</span></a><span>01 / 07</span></div>
+          <div className="hero-bottomline"><span>RK Derawala · Bagru</span><a href="#story">Scroll to discover <span aria-hidden="true">↓</span></a><span className="hero-video-credit">Bagru film: <a href="https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm" target="_blank" rel="noopener noreferrer">Incredible India</a> · edited excerpt · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></div>
         </section>
 
         <div className="moving-line" aria-hidden="true"><div>WOODEN BLOCKS <span>✳</span> NATURAL COLOUR <span>✳</span> DABU RESIST <span>✳</span> HAND PRINTED CLOTH <span>✳</span> WOODEN BLOCKS <span>✳</span> NATURAL COLOUR <span>✳</span> DABU RESIST <span>✳</span> HAND PRINTED CLOTH <span>✳</span></div></div>
