@@ -13,19 +13,19 @@ Open `http://localhost:3000`. Validate with `npm run build` and `npm run typeche
 
 ## Design and media
 
-`DESIGN.md` is the source of truth for the site's composition, palette, typography, interactions, and responsive behaviour. The five supplied colours remain the foundation. Cormorant Garamond and DM Sans are locally hosted provisional fonts, with Inter in the navigation; replace them when the approved brand fonts arrive.
+`DESIGN.md` is the source of truth for the site's composition, palette, typography, interactions, and responsive behaviour. V5 uses the supplied Classic Folk palette: warm cream, parchment, midnight indigo, folk pink, olive and deep gulal. The Boyd inspired the oversized type and pinned Bagru scroll story; no Boyd media or copy was reused. Cormorant Garamond and DM Sans remain locally hosted provisional fonts; replace them when the approved brand fonts arrive.
 
 The interactive craft journal adapts [The Design Stack's Page-Flip Book](https://thedesignstack.co.in/prompts/page-flip-book/) prompt to RK Derawala's story with local imagery, the existing type palette, keyboard controls and reduced-motion support. The Design Stack API key is not stored in this project.
 
-The closer-look heading, questions section and enquiry button adapt The Design Stack's [Block Line Reveal](https://thedesignstack.co.in/prompts/block-line-reveal/), [FAQ Accordion](https://thedesignstack.co.in/prompts/faq-accordion/) and [Circle Fill Button](https://thedesignstack.co.in/prompts/circle-fill-button/) patterns. `SITE_MAP.md` documents the public routes and complete home-page journey.
+The closer-look heading, questions section and enquiry button adapt The Design Stack's [Block Line Reveal](https://thedesignstack.co.in/prompts/block-line-reveal/), [FAQ Accordion](https://thedesignstack.co.in/prompts/faq-accordion/) and [Circle Fill Button](https://thedesignstack.co.in/prompts/circle-fill-button/) patterns. The local design also follows Taste Skill's pinned-poster direction and Emil Kowalski's motion guidance. `SITE_MAP.md` documents the public routes and complete home-page journey.
 
 `media-manifest.json` records every local media file, its source and use. Instagram images are temporary renditions. The floral logo is the profile image from RK Derawala's Instagram account. The paper illustration is AI generated decorative art, not documentary imagery. The hero includes a 15-second, locally stored excerpt from [Incredible India's Bagru craft film](https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm), edited under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). It depicts Bagru craft at a different workshop, not RK Derawala's own footage. Reel cover images link to their original Instagram reels.
 
-## Before launch
+## Before final client handoff
 
 - Replace temporary Instagram renditions with approved original imagery and a higher-resolution logo. Confirm category photos and current availability with RK Derawala.
 - Confirm the WhatsApp number, street address, and any shipping claims before adding them. The current number and location come from the Rajasthan government artisan profile.
-- Set `NEXT_PUBLIC_SITE_URL` to the final public HTTPS domain and rebuild. Until then, the site uses `noindex`, disallows robots and omits canonical URLs and sitemap entries.
+- Production requires `NEXT_PUBLIC_SITE_URL` set to the public HTTPS domain. Without it, the site uses `noindex`, disallows robots and omits canonical URLs and sitemap entries.
 - The GitHub remote is `hackdoubledash/rkderawalabagru`. The connected Vercel project deploys pushes to `main`. Namecheap uses an apex A record and `www` CNAME supplied by the Vercel project's Domains settings.
 
 ## Factual sources

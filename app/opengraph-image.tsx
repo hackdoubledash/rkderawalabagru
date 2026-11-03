@@ -13,10 +13,10 @@ export default function OpenGraphImage() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        background: "#e1dbc9",
-        color: "#2d4530",
+        background: "#f8f1e8",
+        color: "#1e173c",
         padding: "62px 72px",
-        border: "20px solid #5e4b3b",
+        border: "20px solid #e5d5c3",
       }}
     >
       <div style={{ fontSize: 24, letterSpacing: 8, textTransform: "uppercase" }}>Bagru · Rajasthan</div>

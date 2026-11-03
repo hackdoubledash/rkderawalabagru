@@ -7,7 +7,6 @@ export const categories = [
   {
     slug: "fabrics",
     name: "Printed fabrics",
-    number: "01",
     image: "/media/printed-textile.jpg",
     alt: "Earth-toned hand printed cloth hanging against a stone wall",
     description: "Length by length, a surface for pattern, colour and possibility.",
@@ -18,7 +17,6 @@ export const categories = [
   {
     slug: "sarees",
     name: "Sarees",
-    number: "02",
     image: "/media/red-textile.jpg",
     alt: "Red floral printed cloth hanging outdoors",
     description: "A long tradition of colour, made to be worn and lived in.",
@@ -29,7 +27,6 @@ export const categories = [
   {
     slug: "dupattas",
     name: "Dupattas",
-    number: "03",
     image: "/media/floral-archive.jpg",
     alt: "Floral block printed textile beneath an open craft publication",
     description: "Light, expressive cloth with the character of a hand-placed motif.",
@@ -40,7 +37,6 @@ export const categories = [
   {
     slug: "stoles",
     name: "Stoles",
-    number: "04",
     image: "/media/printed-cloth-detail.jpg",
     alt: "Earth-toned and black block printed motifs on pale cloth",
     description: "A smaller canvas for the same remarkable depth of craft.",
@@ -51,8 +47,8 @@ export const categories = [
 ] as const;
 
 export const processSteps = [
-  { number: "01", name: "The block", verb: "Carve", image: "/media/printing-blocks.jpg", alt: "Wooden printing blocks laid on a workshop surface", text: "A motif begins in carved wood. Outline, ground and detail find their place through a maker's practiced eye.", source: "https://www.instagram.com/rkderawala_bagru/reel/DWYxGp0CTgq/" },
-  { number: "02", name: "The impression", verb: "Print", image: "/media/workshop-printing.jpg", alt: "A person printing a striped motif by hand in the workshop", text: "The block meets cloth, then lifts. Repetition becomes rhythm, and slight variations make each length unmistakably human.", source: "https://www.instagram.com/rkderawala_bagru/reel/DON9j5dkR6j/" },
-  { number: "03", name: "The colour", verb: "Dye", image: "/media/indigo-drying.jpg", alt: "Indigo printed cloth drying outdoors", text: "Dabu mud resist and natural colour deepen the pattern. Washing and sunlight bring the print into view.", source: "https://www.instagram.com/rkderawala_bagru/p/DW1O2bxEa1K/" },
-  { number: "04", name: "The cloth", verb: "Reveal", image: "/media/printed-textile.jpg", alt: "Finished earth-toned printed textile hanging against stone", text: "What remains is a cloth with the trace of every hand, block and passage through colour.", source: "https://www.instagram.com/rkderawala_bagru/reel/DYUObvFRo3u/" },
+  { name: "The block", image: "/media/printing-blocks.jpg", alt: "Wooden printing blocks laid on a workshop surface", text: "A motif begins in carved wood. Outline, ground and detail find their place through a maker's practiced eye.", source: "https://www.instagram.com/rkderawala_bagru/reel/DWYxGp0CTgq/" },
+  { name: "The impression", image: "/media/workshop-printing.jpg", alt: "A person printing a striped motif by hand in the workshop", text: "The block meets cloth, then lifts. Repetition becomes rhythm, and slight variations make each length unmistakably human.", source: "https://www.instagram.com/rkderawala_bagru/reel/DON9j5dkR6j/" },
+  { name: "The colour", image: "/media/indigo-drying.jpg", alt: "Indigo printed cloth drying outdoors", text: "Dabu mud resist and natural colour deepen the pattern. Washing and sunlight bring the print into view.", source: "https://www.instagram.com/rkderawala_bagru/p/DW1O2bxEa1K/" },
+  { name: "The cloth", image: "/media/printed-textile.jpg", alt: "Finished earth-toned printed textile hanging against stone", text: "What remains is a cloth with the trace of every hand, block and passage through colour.", source: "https://www.instagram.com/rkderawala_bagru/reel/DYUObvFRo3u/" },
 ] as const;

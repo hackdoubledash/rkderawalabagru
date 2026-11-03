@@ -6,11 +6,11 @@ import { BrandMark } from "./brand-mark";
 import { whatsapp } from "../lib/site-data";
 
 const links = [
-  { href: "/#story", label: "The story" },
-  { href: "/#process", label: "The making" },
-  { href: "/#journal", label: "Craft journal" },
-  { href: "/#textiles", label: "Textiles" },
+  { href: "/#story", label: "Bagru" },
   { href: "/#legacy", label: "The artisan" },
+  { href: "/#process", label: "The making" },
+  { href: "/#textiles", label: "Textiles" },
+  { href: "/#journal", label: "Craft journal" },
   { href: "/#contact", label: "Get in touch" },
 ];
 
@@ -53,7 +53,7 @@ export function SiteHeader() {
       </div>
       <nav id="site-navigation" className={`site-navigation${menuOpen ? " is-open" : ""}`} aria-label="Main navigation" inert={!menuOpen}>
         <div className="navigation-intro"><span>RK Derawala / Bagru</span><p>A place where cloth keeps the memory of the hand.</p><Image src="/media/printed-textile.jpg" alt="Earth-toned hand printed cloth hanging against stone" width={460} height={600} sizes="(max-width: 700px) 28vw, 24vw" /></div>
-        <div className="navigation-links">{links.map((link, index) => <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}><small>0{index + 1}</small>{link.label}<span aria-hidden="true">↗</span></a>)}<a className="navigation-enquiry" href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Begin an enquiry <span aria-hidden="true">↗</span></a></div>
+        <div className="navigation-links">{links.map((link) => <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}<span aria-hidden="true">↗</span></a>)}<a className="navigation-enquiry" href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Begin an enquiry <span aria-hidden="true">↗</span></a></div>
         <span className="navigation-footnote">From Bagru, Rajasthan · Since generations</span>
       </nav>
       <span className="scroll-progress" aria-hidden="true" />

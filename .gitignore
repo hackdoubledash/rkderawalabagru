@@ -19,6 +19,7 @@
 /playwright-report/
 /test-results/
 /lighthouse-reports/
+/.taste-skill/
 *.log
 npm-debug.log*
 yarn-debug.log*

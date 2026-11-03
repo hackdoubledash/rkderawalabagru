@@ -35,7 +35,7 @@ export default async function TextilePage({ params }: Props) {
       <main id="main">
         <section className="category-hero" id="top" aria-labelledby="category-title">
           <Image src={category.image} alt={category.alt} fill loading="eager" fetchPriority="high" sizes="100vw" className="cover-image" />
-          <div className="category-hero-inner"><span className="eyebrow">The textiles / {category.number}</span><h1 id="category-title">{category.name}</h1><div className="category-hero-bottom"><p>{category.description}</p><a href="/#textiles">← All textiles</a></div></div>
+          <div className="category-hero-inner"><h1 id="category-title">{category.name}</h1><div className="category-hero-bottom"><p>{category.description}</p><a href="/#textiles">← All textiles</a></div></div>
         </section>
         <section className="category-story section-space" aria-labelledby="category-story-title">
           <h2 id="category-story-title" data-reveal>Made with<br /><em>the human touch.</em></h2>

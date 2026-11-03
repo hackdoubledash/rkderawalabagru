@@ -5,7 +5,7 @@ export function SiteFooter() {
   return (
     <>
       <section className="contact-panel" id="contact" aria-labelledby="contact-title">
-        <div className="contact-top"><span className="eyebrow">An open invitation</span><span>Bagru, Rajasthan / India</span></div>
+        <div className="contact-top"><span>Bagru, Rajasthan / India</span></div>
         <h2 id="contact-title" data-reveal>Let&apos;s begin with<br /><em>a conversation.</em></h2>
         <div className="contact-bottom"><p>Ask about the craft, the cloth, or a visit to the workshop.</p><a className="round-link" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp">↗</a></div>
       </section>

@@ -14,12 +14,11 @@ const questions = [
 export function CraftFaq() {
   const [open, setOpen] = useState<number | null>(0);
   return <section className="craft-faq section-space" id="questions" aria-labelledby="questions-title">
-    <div className="section-index"><span>07 / Good to know</span><span>Questions from the workshop</span></div>
     <div className="craft-faq-grid">
-      <div className="craft-faq-intro"><h2 id="questions-title">Before the<br /><em>first message.</em></h2><p>A few things to know about the craft and making an enquiry.</p></div>
+      <div className="craft-faq-intro"><h2 id="questions-title">Good to know.</h2></div>
       <div className="craft-faq-list">
         {questions.map((item, index) => <div className="craft-faq-item" key={item.question}>
-          <h3><button type="button" id={`question-${index}`} aria-expanded={open === index} aria-controls={`answer-${index}`} onClick={() => setOpen(current => current === index ? null : index)}><span>0{index + 1}</span>{item.question}<span className="craft-faq-sign" aria-hidden="true">{open === index ? "−" : "+"}</span></button></h3>
+          <h3><button type="button" id={`question-${index}`} aria-expanded={open === index} aria-controls={`answer-${index}`} onClick={() => setOpen(current => current === index ? null : index)}>{item.question}<span className="craft-faq-sign" aria-hidden="true">{open === index ? "−" : "+"}</span></button></h3>
           <div className={`craft-faq-answer${open === index ? " is-open" : ""}`} id={`answer-${index}`} role="region" aria-labelledby={`question-${index}`} inert={open !== index}><div><p>{item.answer}</p></div></div>
         </div>)}
       </div>
