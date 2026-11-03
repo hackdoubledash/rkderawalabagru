@@ -1,13 +1,13 @@
 # Design
 
 ## Source of truth
-Status: Active · 2026-11-03. V4 direction: retain the V3 page structure and visual system; carry over the V4 full-screen navigation; revise only the hero. This revision is being merged to `main` for repository review; `vercel.json` temporarily prevents automatic deployment from `main` until the later launch step. Product surfaces: the RK Derawala landing page and textile category pages. Evidence: user supplied eleven editorial website references, three typographic footer references, the supplied five-colour palette, the current V2 site, the public RK Derawala Instagram profile and source-linked media, the Rajasthan government artisan profile, and The Design Stack's Page-Flip Book interaction prompt. The external references guide composition and motion; they are not brand assets.
+Status: Active · 2026-11-03. V4 direction: retain the V3 page structure and visual system; carry over the V4 full-screen navigation; revise only the hero. The site deploys from `main` through Vercel. Product surfaces: the RK Derawala landing page and textile category pages. Evidence: user supplied eleven editorial website references, three typographic footer references, the supplied five-colour palette, the current V2 site, the public RK Derawala Instagram profile and source-linked media, the Rajasthan government artisan profile, and The Design Stack's Page-Flip Book interaction prompt. The external references guide composition and motion; they are not brand assets.
 
 ## Brand
 An intimate, assured portrait of a living Bagru printing practice. Warm, tactile, art-directed, and unmistakably made by people. Trust comes from real workshop imagery, the family story, sourced award attribution, and direct contact. Avoid invented production counts, ornamental clichés, generic sustainability claims, and representing blue pottery as an RK Derawala product.
 
 ## Product goals
-Introduce the craft, invite exploration of the process and textiles, and make an enquiry easy. The V3 section structure remains the base. This local hero and navigation revision is a preview without checkout or production deployment. Success means visitors can understand the people and technique, explore textile categories, and reach WhatsApp or phone. A Shopify store can be linked later.
+Introduce the craft, invite exploration of the process and textiles, and make an enquiry easy. The V3 section structure remains the base. The site has no checkout. Success means visitors can understand the people and technique, explore textile categories, and reach WhatsApp or phone. A Shopify store can be linked later.
 
 ## Personas and jobs
 Prospective textile buyers, designers, and visitors discovering Bagru craft. They browse visually on phones, seek the maker's story, want to inspect categories and process, and need a direct enquiry path.
@@ -49,4 +49,4 @@ Next.js App Router, rendered server HTML for content and metadata, small client 
 ## Open questions
 - [ ] Client: provide approved original photography/video and higher-resolution brand logo; these replace Instagram renditions.
 - [ ] Client: provide final font files and confirm product availability, shipping regions, and contact details before launch.
-- [ ] Client: review the hero and navigation on `main` before the later Vercel deployment.
+- [ ] Client: review the deployed hero and navigation.

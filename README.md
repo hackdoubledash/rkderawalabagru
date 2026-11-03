@@ -1,6 +1,6 @@
 # RK Derawala website
 
-Local, client-reviewable editorial site for RK Derawala, built with Next.js App Router and React. It presents the Bagru workshop, process, textile categories, Ram Kishore Chhipa's honours, and direct enquiry paths. Checkout is absent; a separate store can be linked later.
+Editorial site for RK Derawala, built with Next.js App Router and React. It presents the Bagru workshop, process, textile categories, Ram Kishore Chhipa's honours, and direct enquiry paths. Checkout is absent; a separate store can be linked later.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ The closer-look heading, questions section and enquiry button adapt The Design S
 - Replace temporary Instagram renditions with approved original imagery and a higher-resolution logo. Confirm category photos and current availability with RK Derawala.
 - Confirm the WhatsApp number, street address, and any shipping claims before adding them. The current number and location come from the Rajasthan government artisan profile.
 - Set `NEXT_PUBLIC_SITE_URL` to the final public HTTPS domain and rebuild. Until then, the site uses `noindex`, disallows robots and omits canonical URLs and sitemap entries.
-- The GitHub remote is `hackdoubledash/rkderawalabagru`. The connected Vercel project normally deploys on pushes to `main`. `vercel.json` temporarily disables automatic deployments from `main` so this revision can be stored on GitHub before publication. Remove that setting during the later Vercel launch step.
+- The GitHub remote is `hackdoubledash/rkderawalabagru`. The connected Vercel project deploys pushes to `main`. Namecheap uses an apex A record and `www` CNAME supplied by the Vercel project's Domains settings.
 
 ## Factual sources
 
