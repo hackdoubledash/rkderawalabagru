@@ -38,11 +38,12 @@ export default async function TextilePage({ params }: Props) {
           <div className="category-hero-inner"><h1 id="category-title">{category.name}</h1><div className="category-hero-bottom"><p>{category.description}</p><a href="/#textiles">← All textiles</a></div></div>
         </section>
         <section className="category-story section-space" aria-labelledby="category-story-title">
-          <h2 id="category-story-title" data-reveal>Made with<br /><em>the human touch.</em></h2>
-          <div className="category-story-copy" data-reveal><p>{category.detail}</p><a className="text-link" href={whatsapp} target="_blank" rel="noopener noreferrer">Ask about {category.name.toLowerCase()} <span aria-hidden="true">↗</span></a></div>
+          <h2 id="category-story-title">Marked by hand.</h2>
+          <div className="category-story-copy"><p>{category.detail}</p><a className="text-link" href={whatsapp} target="_blank" rel="noopener noreferrer">Ask about {category.name.toLowerCase()} <span aria-hidden="true">↗</span></a></div>
         </section>
-        <div className="category-photos section-space"><figure data-reveal><Image src={category.companion} alt={category.companionAlt} fill sizes="(max-width: 700px) 50vw, 42vw" className="cover-image" /><figcaption>From the RK Derawala archive</figcaption></figure><figure data-reveal><Image src="/media/workshop-printing.jpg" alt="Hand printing a striped motif onto cloth in the workshop" fill sizes="(max-width: 700px) 50vw, 42vw" className="cover-image" /><figcaption>The making / Bagru</figcaption></figure></div>
-        <div className="category-next section-space"><span>Continue exploring</span><a href={`/textiles/${next.slug}`}>{next.name}<span aria-hidden="true">↗</span></a></div>
+        <div className="category-photos section-space"><figure><Image src={category.companion} alt={category.companionAlt} fill sizes="(max-width: 700px) 50vw, 42vw" className="cover-image" /><figcaption>From the RK Derawala archive</figcaption></figure><figure><Image src="/media/workshop-printing.jpg" alt="Hand printing a striped motif onto cloth in the workshop" fill sizes="(max-width: 700px) 50vw, 42vw" className="cover-image" /><figcaption>The making / Bagru</figcaption></figure><figure><Image src="/media/derawala-family.jpg" alt="Ram Kishore Chhipa with the Derawala family before indigo printed cloth" fill sizes="(max-width: 700px) 100vw, 80vw" className="cover-image" /><figcaption>The Derawala family</figcaption></figure></div>
+        <figure className="category-film"><Image src="/video/bagru-block-printing-poster.jpg" alt="" fill sizes="100vw" className="cover-image" /><video autoPlay muted loop playsInline preload="metadata" poster="/video/bagru-block-printing-poster.jpg"><source src="/video/bagru-block-printing.mp4" type="video/mp4" /></video><figcaption>Hand block printing in Bagru. Film: <a href="https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm" target="_blank" rel="noopener noreferrer">Incredible India</a>. Filmed at a separate workshop.</figcaption></figure>
+        <div className="category-next section-space"><a href={`/textiles/${next.slug}`}>Explore {next.name.toLowerCase()}</a></div>
       </main>
       <SiteFooter />
     </>

@@ -1,25 +1,25 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BrandMark } from "./brand-mark";
 import { whatsapp } from "../lib/site-data";
 
 const links = [
   { href: "/#story", label: "Bagru" },
-  { href: "/#legacy", label: "The artisan" },
-  { href: "/#process", label: "The making" },
+  { href: "/#legacy", label: "Artisan" },
+  { href: "/#process", label: "Process" },
   { href: "/#textiles", label: "Textiles" },
-  { href: "/#journal", label: "Craft journal" },
-  { href: "/#contact", label: "Get in touch" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 32);
+    const update = () => setScrolled(window.scrollY > 48);
     update();
     window.addEventListener("scroll", update, { passive: true });
     return () => window.removeEventListener("scroll", update);
@@ -27,8 +27,12 @@ export function SiteHeader() {
 
   useEffect(() => {
     if (!menuOpen) return;
+    firstLinkRef.current?.focus();
     const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMenuOpen(false);
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        toggleRef.current?.focus();
+      }
     };
     window.addEventListener("keydown", close);
     document.body.style.overflow = "hidden";
@@ -38,25 +42,10 @@ export function SiteHeader() {
     };
   }, [menuOpen]);
 
-  return (
-    <header className={`site-header${scrolled ? " is-scrolled" : ""}${menuOpen ? " menu-open" : ""}`}>
-      <a className="brand" href="/#top" onClick={() => setMenuOpen(false)}>
-        <BrandMark size={42} />
-        <span className="brand-name">RK Derawala<small>Bagru · Rajasthan</small></span>
-      </a>
-      <span className="header-place">Hand printed in Bagru <span aria-hidden="true">✳</span> Made to be held</span>
-      <div className="header-actions">
-        <a className="header-enquire" href={whatsapp} target="_blank" rel="noopener noreferrer">Enquire <span aria-hidden="true">↗</span></a>
-        <button className={`menu-toggle${menuOpen ? " is-open" : ""}`} type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen((open) => !open)}>
-          <span className="menu-label">{menuOpen ? "Close" : "Menu"}</span><span className="menu-lines" aria-hidden="true"><i /><i /></span>
-        </button>
-      </div>
-      <nav id="site-navigation" className={`site-navigation${menuOpen ? " is-open" : ""}`} aria-label="Main navigation" inert={!menuOpen}>
-        <div className="navigation-intro"><span>RK Derawala / Bagru</span><p>A place where cloth keeps the memory of the hand.</p><Image src="/media/printed-textile.jpg" alt="Earth-toned hand printed cloth hanging against stone" width={460} height={600} sizes="(max-width: 700px) 28vw, 24vw" /></div>
-        <div className="navigation-links">{links.map((link) => <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}<span aria-hidden="true">↗</span></a>)}<a className="navigation-enquiry" href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Begin an enquiry <span aria-hidden="true">↗</span></a></div>
-        <span className="navigation-footnote">From Bagru, Rajasthan · Since generations</span>
-      </nav>
-      <span className="scroll-progress" aria-hidden="true" />
-    </header>
-  );
+  return <header className={`site-header${scrolled ? " is-scrolled" : ""}${menuOpen ? " menu-open" : ""}`}>
+    <a className="brand" href="/#top" onClick={() => setMenuOpen(false)}><BrandMark size={38} /><span>RK Derawala<small>Bagru, Rajasthan</small></span></a>
+    <nav className="desktop-nav" aria-label="Primary navigation">{links.map(link => <a href={link.href} key={link.href}>{link.label}</a>)}</nav>
+    <div className="header-actions"><a className="header-enquire" href={whatsapp} target="_blank" rel="noopener noreferrer">Enquire</a><button ref={toggleRef} className="menu-toggle" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(open => !open)}>{menuOpen ? "Close" : "Menu"}</button></div>
+    <nav id="mobile-navigation" className={`mobile-nav${menuOpen ? " is-open" : ""}`} aria-label="Mobile navigation" inert={!menuOpen}>{links.map((link, index) => <a ref={index === 0 ? firstLinkRef : undefined} href={link.href} key={link.href} onClick={() => setMenuOpen(false)}>{link.label}</a>)}<a className="mobile-enquire" href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Enquire on WhatsApp</a></nav>
+  </header>;
 }

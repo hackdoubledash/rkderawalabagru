@@ -13,13 +13,11 @@ Open `http://localhost:3000`. Validate with `npm run build` and `npm run typeche
 
 ## Design and media
 
-`DESIGN.md` is the source of truth for the site's composition, palette, typography, interactions, and responsive behaviour. V5 uses the supplied Classic Folk palette: warm cream, parchment, midnight indigo, folk pink, olive and deep gulal. The Boyd inspired the oversized type and pinned Bagru scroll story; no Boyd media or copy was reused. Cormorant Garamond and DM Sans remain locally hosted provisional fonts; replace them when the approved brand fonts arrive.
+`DESIGN.md` records the V6 art direction: a photo-led editorial layout with staggered image sizes, a Bagru story, an artisan recognition table, an interactive making sequence, and a typographic footer. The Classic Folk palette, Cormorant Garamond display type, and DM Sans body type are retained. Both fonts are locally hosted placeholders until approved brand fonts arrive. `SITE_MAP.md` documents the routes and home-page journey.
 
-The interactive craft journal adapts [The Design Stack's Page-Flip Book](https://thedesignstack.co.in/prompts/page-flip-book/) prompt to RK Derawala's story with local imagery, the existing type palette, keyboard controls and reduced-motion support. The Design Stack API key is not stored in this project.
+The craft journal supports keyboard arrows and touch swipes. The making sequence, textile detail and enquiry paths are interactive; motion respects reduced-motion preferences. No third-party design API key is stored in this project.
 
-The closer-look heading, questions section and enquiry button adapt The Design Stack's [Block Line Reveal](https://thedesignstack.co.in/prompts/block-line-reveal/), [FAQ Accordion](https://thedesignstack.co.in/prompts/faq-accordion/) and [Circle Fill Button](https://thedesignstack.co.in/prompts/circle-fill-button/) patterns. The local design also follows Taste Skill's pinned-poster direction and Emil Kowalski's motion guidance. `SITE_MAP.md` documents the public routes and complete home-page journey.
-
-`media-manifest.json` records every local media file, its source and use. Instagram images are temporary renditions. The floral logo is the profile image from RK Derawala's Instagram account. The paper illustration is AI generated decorative art, not documentary imagery. The hero includes a 15-second, locally stored excerpt from [Incredible India's Bagru craft film](https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm), edited under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). It depicts Bagru craft at a different workshop, not RK Derawala's own footage. Reel cover images link to their original Instagram reels.
+`media-manifest.json` records each local media file, its source and use. Instagram images are temporary renditions. The floral logo comes from RK Derawala's public Instagram profile. The home hero and category pages use a 15-second, locally stored excerpt from [Incredible India's Bagru craft film](https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm), edited under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). It shows a different Bagru workshop, not RK Derawala's.
 
 ## Before final client handoff
 
@@ -32,6 +30,6 @@ The closer-look heading, questions section and enquiry button adapt The Design S
 
 - [RK Derawala Instagram profile](https://www.instagram.com/rkderawala_bagru/): visual identity, workshop imagery, hand block printed textiles, natural colours and vegetable dyes.
 - [Rajasthan government profile of Ram Kishore Chhipa](https://handmadeinrajasthan.rajasthan.gov.in/content/industries/handmadeinrajasthandepartment/mastercrafts/padmaawardees/list/ramkishorechhipa.html): identity, Padma Shri 2009, National Award 1987, mobile number and location.
-- [RK Derawala public product listing](https://12886-in.all.biz/): broad category references for fabrics, sarees, dupattas and stoles. V3 does not claim particular pieces are currently in stock.
+- [RK Derawala public product listing](https://12886-in.all.biz/): broad category references for fabrics, sarees, dupattas and stoles. The site does not claim particular pieces are currently in stock.
 
 The site makes no numerical environmental, employment, production or worldwide-shipping claims. Awards are attributed to Ram Kishore Chhipa (Derawala), rather than to the business.

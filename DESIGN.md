@@ -1,41 +1,42 @@
-# Design
+# RK Derawala design system
 
-## Source of truth
+## Direction
 
-Status: Active V5 redesign, approved for `main` on 2026-11-04. The Boyd is a composition and motion reference. RK Derawala's Instagram, the Rajasthan government artisan profile, the user's Classic Folk design system and CSS tokens, and the recorded media sources supply the identity and facts. No reference site's media or copy is reused.
+Taste Skill v2 dealt **Photographs at uneven sizes** (seed 1923842009). The palette and type were kept from the approved Classic Folk system. The proof section was redrawn as **Recognition as a table** because there are two verified honours, not a long client or press list. The hero uses the existing credited Bagru film because the user requested moving heritage footage.
 
-## Brand and audience
+**Idea:** On this page, the Derawala family’s photographed practice becomes a gallery of unevenly placed prints. The visitor can select the moment in the four-stage printing sequence, inspect a motif, turn the craft journal, and choose an enquiry.
 
-A tactile portrait of RK Derawala's Bagru hand block printing practice for textile buyers, designers and visitors. The site should make the family and craft visible, then make direct enquiry easy. No checkout, invented production figures, employment totals, sustainability metrics or unconfirmed export promises. The National Award (1987) and Padma Shri (2009) always belong to Ram Kishore Chhipa (Derawala), not to the business.
+## What belongs to this subject
 
-## Design idea
+Bagru, Rajasthan; Bypass Road in Meeno ka Mohalla; the Derawala family portrait; Ram Kishore Chhipa (Derawala); the 1987 National Award; the 2009 Padma Shri; carved wooden blocks; hand-placed impressions; Dabu mud resist; indigo cloth drying outdoors; fabrics, sarees, dupattas and stoles; the floral profile mark. These are the source of the composition and copy. The film is a credited view of a different Bagru workshop, used as atmosphere.
 
-Bagru becomes a pinned poster: its name holds on screen while the family, the artisan's hand and the cloth pass through it. This is the main scroll event. The person behind the honours follows directly, before process and product browsing. The live interaction is the four-stage process explorer; the visitor selects a stage and sees its source-linked image and explanation. The page must be complete and readable without animation.
+## Page argument
 
-## Page journey
+1. RK Derawala makes hand block printed textiles in Bagru → film and direct description.
+2. A person places each impression → three sourced photographs in the held Bagru scene.
+3. The practice belongs to a family and place → portrait and Bagru address.
+4. Ram Kishore Chhipa’s work received two honours → ceremony photograph and individually attributed awards.
+5. A block, impression, colour and finished cloth form the process → selectable photographs with source links.
+6. The work becomes four textile forms → four category images and routes.
+7. Small differences remain visible → interactive motif detail.
+8. The craft can be browsed at a slower pace → four-page journal.
+9. Visitors can ask about a piece or project → prepared WhatsApp enquiries and direct contact.
+10. Practical questions can be answered before writing → accessible accordion.
 
-Hero → pinned Bagru story → Ram Kishore Chhipa's honours → interactive process → variation interlude → textiles → motif zoom → craft journal → workshop reels → enquiry paths → practical questions → contact and footer. Navigation leads with Bagru and Artisan. Category routes remain `/textiles/fabrics`, `/textiles/sarees`, `/textiles/dupattas`, and `/textiles/stoles`. `SITE_MAP.md` records the full journey.
+## Visual language
 
-## Visual system
+Warm cream `#F8F1E8`, soft white `#FFFCF8`, parchment `#E5D5C3`, midnight indigo `#1E173C`, folk pink `#DF73A4`, olive `#78735E`, deep gulal `#971B36`. The cream and indigo are explicit brand choices even though the generic Taste Skill house palette excludes them. Cormorant Garamond is the provisional display face and DM Sans is the body face. Both are hosted locally.
 
-- User-supplied Classic Folk palette: warm cream `#F8F1E8`, soft white `#FFFCF8`, parchment `#E5D5C3`, midnight indigo `#1E173C`, folk pink `#DF73A4`, olive `#78735E`, deep gulal `#971B36`, divider `#CCB9A4`. Semantic tokens in `app/globals.css` own these values. Indigo and warm cream carry the page; gulal marks recognition and enquiry; pink is sparing.
-- Locally hosted Cormorant Garamond in regular and italic is the provisional display face. Locally hosted DM Sans is the body and UI face. Titles use tight tracking and short leading. Body text stays readable and balanced. The user will provide final fonts later.
-- The hero uses a sourced 15-second Bagru craft film as atmosphere, with three sourced textile frames. The film depicts a different Bagru workshop and is credited in the hero and footer. Family and craft photographs come from the media manifest. The Instagram profile image is the compact brand mark. The heritage illustration is explicitly decorative.
-- Sections change scale and field: full-bleed film, sticky image story, inverse recognition field, process split, large still interlude, horizontal textile gallery, tactile journal, and typographic footer. Avoid repeated eyebrow/title/subtext stacks, decorative numbering and invented metrics.
+One pair of outer margins, large thin serif titles, readable sans body text, full fields of colour, square photographs, no decorative numbering or eyebrow stacks. Adjacent sections change composition: full film, held sentence with passing images, family mosaic, recognition field, horizontal process, staggered textile gallery, interactive detail, journal, enquiry, split questions, typographic footer.
 
-## Motion and interaction
+## Motion and behavior
 
-The pinned Bagru story uses native scrolling and `position: sticky`; it never hijacks scroll. CSS view timelines unmask images, move crops slightly and bring captions and award panels into view. The hero footage loops muted with a still poster fallback. Process selection, carousel, zoom, page turning, enquiries and FAQ remain directly controlled. Interactive controls use short, interruptible transitions with clear pressed/focus states. Under `prefers-reduced-motion`, video and nonessential travel stop and all content remains visible.
+The film moves quietly behind the hero copy and returns as a credited Bagru craft interlude on textile pages. The Bagru sentence stays in place as three photographs pass on the other side of the frame. Images enter with a short rise and reveal; the process and journal change their visible image on selection. All controls have focus styles and accessible names. Reduced-motion settings stop the film and remove nonessential animation. The page remains readable without animation.
 
-## Accessibility and responsive behavior
+## Facts and media
 
-Semantic landmarks and heading order, descriptive image text, visible focus, keyboard-operable menu/tabs/carousel/book/FAQ, readable contrast and touch targets at least 44px. On phones, the Bagru title pins near the top and each image fills the middle band; awards stack below the story. The page must have no horizontal document overflow. The menu closes on Escape and locks scroll only while open. Media reserves dimensions and loads responsively.
+Awards belong to Ram Kishore Chhipa (Derawala), never the company. No invented production, employment, environmental or export numbers. `media-manifest.json` lists the local imagery and its sources. Temporary Instagram renditions and the profile mark should be replaced by approved originals before final client handoff. Confirm current stock, approved fonts and export arrangements with RK Derawala.
 
-## Implementation and verification
+## Verification
 
-Next.js App Router renders page copy and structured data in HTML; small client components own interaction. Metadata, social preview, robots and sitemap remain. Media sources live in `media-manifest.json`. Before a release, run typecheck, production build, desktop and mobile browser review, keyboard checks, and performance/SEO audit.
-
-## Open items
-
-- Approved original photography/video and a high-resolution logo are needed before final client handoff.
-- Final fonts, current product availability, shipping regions and contact details need client confirmation.
+Run typecheck, production build, Taste Skill lint and rendered inspection at 1440, 768 and 390 pixels. Open every screenshot. Check keyboard access and links. Review the sitemap, metadata and canonical URL before a public release.

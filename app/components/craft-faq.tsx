@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
-import "./craft-faq.css";
 
 const questions = [
   { question: "What is Bagru hand block printing?", answer: "It is a textile printing practice rooted in Bagru, Rajasthan. Carved wooden blocks are placed by hand onto cloth to build a repeated motif. RK Derawala also works within the Dabu mud-resist tradition." },
@@ -13,15 +13,8 @@ const questions = [
 
 export function CraftFaq() {
   const [open, setOpen] = useState<number | null>(0);
-  return <section className="craft-faq section-space" id="questions" aria-labelledby="questions-title">
-    <div className="craft-faq-grid">
-      <div className="craft-faq-intro"><h2 id="questions-title">Good to know.</h2></div>
-      <div className="craft-faq-list">
-        {questions.map((item, index) => <div className="craft-faq-item" key={item.question}>
-          <h3><button type="button" id={`question-${index}`} aria-expanded={open === index} aria-controls={`answer-${index}`} onClick={() => setOpen(current => current === index ? null : index)}>{item.question}<span className="craft-faq-sign" aria-hidden="true">{open === index ? "−" : "+"}</span></button></h3>
-          <div className={`craft-faq-answer${open === index ? " is-open" : ""}`} id={`answer-${index}`} role="region" aria-labelledby={`question-${index}`} inert={open !== index}><div><p>{item.answer}</p></div></div>
-        </div>)}
-      </div>
-    </div>
+  return <section className="faq section-pad" id="questions" aria-labelledby="questions-title">
+    <div className="faq-pictures"><figure className="faq-main-photo"><Image src="/media/floral-archive.jpg" alt="Floral hand printed textile beside an open craft publication" fill sizes="(max-width: 700px) 100vw, 42vw" className="cover-image" /></figure><figure className="faq-small-photo"><Image src="/media/printing-blocks.jpg" alt="Carved wooden blocks used in printing" fill sizes="(max-width: 700px) 35vw, 14vw" className="cover-image" /></figure></div>
+    <div className="faq-content"><h2 id="questions-title">Good to know</h2><p>Find us on Bypass Road, Meeno ka Mohalla, Bagru, Jaipur. Call or message before visiting.</p><div className="faq-list">{questions.map((item, index) => <div className="faq-item" key={item.question}><h3><button type="button" id={`question-${index}`} aria-expanded={open === index} aria-controls={`answer-${index}`} onClick={() => setOpen(current => current === index ? null : index)}>{item.question}<span aria-hidden="true">{open === index ? "−" : "+"}</span></button></h3><div className={`faq-answer${open === index ? " is-open" : ""}`} id={`answer-${index}`} role="region" aria-labelledby={`question-${index}`} inert={open !== index}><p>{item.answer}</p></div></div>)}</div></div>
   </section>;
 }
