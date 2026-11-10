@@ -1,35 +1,27 @@
-# RK Derawala website
+# RK Derawala · The Living Archive
 
-Editorial site for RK Derawala, built with Next.js App Router and React. It presents the Bagru workshop, process, textile categories, Ram Kishore Chhipa's honours, and direct enquiry paths. Checkout is absent; a separate store can be linked later.
+Editorial website for a Bagru hand block printing practice. Built with the existing Next.js App Router, React, TypeScript and CSS.
 
-## Run locally
+## Review locally
 
-```bash
-npm install
+```sh
+npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`. Validate with `npm run build` and `npm run typecheck`.
+Open [localhost:3000](http://localhost:3000). Use `npm run build && npm run typecheck` to verify production, then `npm run start` to serve that build locally. Leave the public URL unset for the local review with the existing archive renditions. Local builds tell crawlers not to index them.
 
-## Design and media
+## Release
 
-`DESIGN.md` records the V6 art direction: a photo-led editorial layout with staggered image sizes, a Bagru story, an artisan recognition table, an interactive making sequence, and a typographic footer. The Classic Folk palette, Cormorant Garamond display type, and DM Sans body type are retained. Both fonts are locally hosted placeholders until approved brand fonts arrive. `SITE_MAP.md` documents the routes and home-page journey.
+Set `NEXT_PUBLIC_SITE_URL=https://rkderawalabagru.com` in the existing Vercel production project. It drives canonical URLs, the sitemap, robots and social metadata. Confirm the project environment before pushing to `main`, which triggers production deployment.
 
-The craft journal supports keyboard arrows and touch swipes. The making sequence, textile detail and enquiry paths are interactive; motion respects reduced-motion preferences. No third-party design API key is stored in this project.
+The review photos reside outside `public/`. The archive route only exposes them on local review builds or when `RK_APPROVED_ARCHIVE_MEDIA=1` is explicitly set. Review the [asset manifest](ASSET_MANIFEST.md) before enabling it. For mixed permissions, clear and update each asset’s status in the data model. Blue pottery also needs verified items in the content model and an explicit publication flag.
 
-`media-manifest.json` records each local media file, its source and use. Instagram images are temporary renditions. The floral logo comes from RK Derawala's public Instagram profile. The home hero and category pages use a 15-second, locally stored excerpt from [Incredible India's Bagru craft film](https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm), edited under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). It shows a different Bagru workshop, not RK Derawala's.
+The two enquiry forms prepare a WhatsApp message in the browser and hand it off for review and sending. They have no email backend or storage.
 
-## Before final client handoff
+## Handoff files
 
-- Replace temporary Instagram renditions with approved original imagery and a higher-resolution logo. Confirm category photos and current availability with RK Derawala.
-- Confirm the WhatsApp number, street address, and any shipping claims before adding them. The current number and location come from the Rajasthan government artisan profile.
-- Production requires `NEXT_PUBLIC_SITE_URL` set to the public HTTPS domain. Without it, the site uses `noindex`, disallows robots and omits canonical URLs and sitemap entries.
-- The GitHub remote is `hackdoubledash/rkderawalabagru`. The connected Vercel project deploys pushes to `main`. Namecheap uses an apex A record and `www` CNAME supplied by the Vercel project's Domains settings.
-
-## Factual sources
-
-- [RK Derawala Instagram profile](https://www.instagram.com/rkderawala_bagru/): visual identity, workshop imagery, hand block printed textiles, natural colours and vegetable dyes.
-- [Rajasthan government profile of Ram Kishore Chhipa](https://handmadeinrajasthan.rajasthan.gov.in/content/industries/handmadeinrajasthandepartment/mastercrafts/padmaawardees/list/ramkishorechhipa.html): identity, Padma Shri 2009, National Award 1987, mobile number and location.
-- [RK Derawala public product listing](https://12886-in.all.biz/): broad category references for fabrics, sarees, dupattas and stoles. The site does not claim particular pieces are currently in stock.
-
-The site makes no numerical environmental, employment, production or worldwide-shipping claims. Awards are attributed to Ram Kishore Chhipa (Derawala), rather than to the business.
+- [DESIGN.md](DESIGN.md) records art direction and motion.
+- [SITE_MAP.md](SITE_MAP.md) maps the routes and redirects.
+- [CONTENT_VERIFICATION.md](CONTENT_VERIFICATION.md) records evidence and approvals.
+- [ASSET_MANIFEST.md](ASSET_MANIFEST.md) records sources, alt text, crops and usage permissions.

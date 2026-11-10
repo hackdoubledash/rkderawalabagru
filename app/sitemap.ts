@@ -1,12 +1,18 @@
 import type { MetadataRoute } from "next";
-import { categories } from "./lib/site-data";
+import { publishedTextiles } from "./lib/collections";
+import { publishedArticles } from "./lib/journal";
+import { publicUrl, visible } from "./lib/site";
+import { navigation, pottery } from "./lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  if (!siteUrl || siteUrl.includes("example.com")) return [];
-
-  return [
-    { url: siteUrl, changeFrequency: "monthly", priority: 1 },
-    ...categories.map(({ slug }) => ({ url: `${siteUrl}/textiles/${slug}`, changeFrequency: "monthly" as const, priority: 0.7 })),
+  if (!publicUrl) return [];
+  const paths = [
+    ...navigation.map(({ href }) => href),
+    "/collections/textiles",
+    ...publishedTextiles.map(({ slug }) => `/collections/textiles/${slug}`),
+    ...(pottery.published && pottery.objects.some(({ image }) => visible(image)) ? ["/collections/blue-pottery"] : []),
+    "/journal",
+    ...publishedArticles.map(({ slug }) => `/journal/${slug}`),
   ];
+  return paths.map((path) => ({ url: `${publicUrl}${path === "/" ? "" : path}` }));
 }

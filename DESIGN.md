@@ -1,42 +1,42 @@
-# RK Derawala design system
+# The Living Archive
 
-## Direction
+On this page, the Derawala archive’s cloth, family portrait and recorded honours become the prints of an exhibition. A fixed frame changes one impression at a time as the reader moves through the craft.
 
-Taste Skill v2 dealt **Photographs at uneven sizes** (seed 1923842009). The palette and type were kept from the approved Classic Folk system. The proof section was redrawn as **Recognition as a table** because there are two verified honours, not a long client or press list. The hero uses the existing credited Bagru film because the user requested moving heritage footage.
+Taste Skill dealt **The pinned poster**, seed **1131435972**. A stationary frame that changes contents suits the repetition and placement of a printed length. The supplied brief overrides the dealt pinned portrait hero with a full-bleed craft film and thin display serif. The pin carries the process chapter instead of delaying entry. The proof blueprint becomes a dated exhibition entry because there are two confirmed honours to present. The brief’s closing typographic invitation replaces the quiet-line footer.
 
-**Idea:** On this page, the Derawala family’s photographed practice becomes a gallery of unevenly placed prints. The visitor can select the moment in the four-stage printing sequence, inspect a motif, turn the craft journal, and choose an enquiry.
+## Composition and reference decisions
 
-## What belongs to this subject
+| Chapter | Composition and material | Phone and motion | Next action |
+| --- | --- | --- | --- |
+| Entrance | Full-bleed Bagru worktable film behind two lines of Cormorant | Closer crop and stacked actions. Short masked lift, then the film settles in | Discover the story or explore collections |
+| Origin | Large paper field and an off-axis worktable print | Copy precedes the photograph. Scroll reveal on the headline and print | Our Story |
+| Textile table | Large botanical illustration, quiet editorial copy and a smaller documentary cloth crop | Two prints in a four-column rhythm. The title comes first, followed by the illustration and the cloth | Continue into the archive |
+| Honours | Madder field, ceremony image and the dates 2009 and 1987 | Year and honour remain paired. Dates rise gently into place | Artisan source or Our Story |
+| Making | Sticky photographic stage next to a naturally scrolling list | Independent, stacked photographs and steps. On desktop images crossfade and progress advances as each step reaches the reading line | The Craft |
+| Collections | Index rows against a large adjacent image | Always-visible thumbnail per row. Crossfade for pointer and keyboard preview | Detail route |
+| Material | Indigo field and a crop of the repeat | Enlarged image opens in a native dialog, with zoom and focus restoration | Read the impression closely |
+| Family | Square portrait and an account of daily practice | Portrait above copy. Image settles as it enters | Our Story |
+| Enquiries and close | Practical routes followed by a dark, oversized wordmark | Stacked reading order and explicit WhatsApp handoff | Contact or trade |
 
-Bagru, Rajasthan; Bypass Road in Meeno ka Mohalla; the Derawala family portrait; Ram Kishore Chhipa (Derawala); the 1987 National Award; the 2009 Padma Shri; carved wooden blocks; hand-placed impressions; Dabu mud resist; indigo cloth drying outdoors; fabrics, sarees, dupattas and stoles; the floral profile mark. These are the source of the composition and copy. The film is a credited view of a different Bagru workshop, used as atmosphere.
+The Good Move reference informs the panoramic opening and gradual change of tone. The True Care informs the archive reading rhythm, captions and high-contrast serif. Oura & Co. informs the direct navigation, image-led first screen and open typographic frame. Grand Tour Privé and The Museum inform the staggered prints and madder recognition chapter described in the brief. Their specific artwork is not reproduced. Only the earlier supplied images visible in the chat could be directly compared. References without a matching image in the conversation informed the design through their written descriptions, including darker photo treatment, compact hierarchy and quiet navigation.
 
-## Page argument
+## Type, colour and motion
 
-1. RK Derawala makes hand block printed textiles in Bagru → film and direct description.
-2. A person places each impression → three sourced photographs in the held Bagru scene.
-3. The practice belongs to a family and place → portrait and Bagru address.
-4. Ram Kishore Chhipa’s work received two honours → ceremony photograph and individually attributed awards.
-5. A block, impression, colour and finished cloth form the process → selectable photographs with source links.
-6. The work becomes four textile forms → four category images and routes.
-7. Small differences remain visible → interactive motif detail.
-8. The craft can be browsed at a slower pace → four-page journal.
-9. Visitors can ask about a piece or project → prepared WhatsApp enquiries and direct contact.
-10. Practical questions can be answered before writing → accessible accordion.
+Cormorant and DM Sans are served locally. The high-resolution client logo sets the palette. Median pixels sampled by region gave parchment `#E9DAC7`, indigo `#121A45`, olive `#7B775C`, petal pink `#DF74A6` and madder `#9B1C38`. Parchment and its ivory tints carry the page, indigo supplies text and dark fields, and madder marks the main actions and honours. Pink accents the journal and navigation details. A darker olive `#54513E` keeps light type readable in textile detail sections. The logo appears in the site shell, favicon and social card.
 
-## Visual language
+The home print table pairs a dominant generated floral plate with a smaller documentary cloth image. The supplied botanical border and architectural engraving anchor the journal invitation and appear again on the journal landing page. Both are identified in the asset manifest.
 
-Warm cream `#F8F1E8`, soft white `#FFFCF8`, parchment `#E5D5C3`, midnight indigo `#1E173C`, folk pink `#DF73A4`, olive `#78735E`, deep gulal `#971B36`. The cream and indigo are explicit brand choices even though the generic Taste Skill house palette excludes them. Cormorant Garamond is the provisional display face and DM Sans is the body face. Both are hosted locally.
+The Animation Vocabulary guide informs the names and purposes of the movements. A **reveal** lifts the two hero lines from clipping masks. The **stagger** separates the second line and the supporting content. **Scroll reveals** on selected headings and photographs give the larger prints space to arrive. A **crossfade** changes the craft stage and collection preview without shifting surrounding text. **Press feedback** and arrow translation confirm links and actions. The mobile menu and image viewer use native dialogs, Escape and focus return. Route navigation uses the router’s normal history and scroll behaviour.
 
-One pair of outer margins, large thin serif titles, readable sans body text, full fields of colour, square photographs, no decorative numbering or eyebrow stacks. Adjacent sections change composition: full film, held sentence with passing images, family mosaic, recognition field, horizontal process, staggered textile gallery, interactive detail, journal, enquiry, split questions, typographic footer.
-
-## Motion and behavior
-
-The film moves quietly behind the hero copy and returns as a credited Bagru craft interlude on textile pages. The Bagru sentence stays in place as three photographs pass on the other side of the frame. Images enter with a short rise and reveal; the process and journal change their visible image on selection. All controls have focus styles and accessible names. Reduced-motion settings stop the film and remove nonessential animation. The page remains readable without animation.
-
-## Facts and media
-
-Awards belong to Ram Kishore Chhipa (Derawala), never the company. No invented production, employment, environmental or export numbers. `media-manifest.json` lists the local imagery and its sources. Temporary Instagram renditions and the profile mark should be replaced by approved originals before final client handoff. Confirm current stock, approved fonts and export arrangements with RK Derawala.
+On smaller screens the pin becomes naturally scrolling image-and-text chapters. The home hero holds its sharp still and lets the visitor choose when to play. With reduced motion, the pin and reveals are disabled. The film starts after load only while visible and permitted by motion and data preferences, pauses out of view, and has a manually operated play/pause control and a still fallback.
 
 ## Verification
 
-Run typecheck, production build, Taste Skill lint and rendered inspection at 1440, 768 and 390 pixels. Open every screenshot. Check keyboard access and links. Review the sitemap, metadata and canonical URL before a public release.
+- Next production build, TypeScript check, Taste Skill lint and Git whitespace check passed.
+- The baseline homepage measured 16.1 desktop screens and triggered an edge-text failure. The review measured 11.5 desktop screens, two-line hero and section titles, zero failures and one typography warning at 1440, 768 and 390 pixels. The warning corresponds to an icon glyph using fallback type on tablet and mobile. A warm paper allowance reflects the brief’s palette.
+- Chrome route and interaction checks covered 14 routes from 320 to 1920 pixels. They verified mobile dialog focus and scroll lock, gallery arrows and zoom, focus-driven collection previews, all six craft stages, reduced motion and an intercepted WhatsApp draft. The sticky stage is native CSS and IntersectionObserver, so the stage was checked directly at each chapter rather than with the skill’s Stage.js scene harness.
+- A public-mode smoke test checked the 14 canonical URLs and their social previews, five permanent redirects, robots and sitemap, the branded 404 and the inaccessible pending media and pottery routes. The review server can serve the original photo renditions.
+- One cold, throttled mobile Chrome run measured LCP at 916 ms and cumulative layout shift at 0.035. This was a local lab run, without field INP or a physical iOS or Android check. Safari and Firefox were not tested.
+- The final self-critique scored design 7.8, usability 8.2, creativity 7.7 and content 8.0, for a weighted 7.9. The remaining visual limit is the small source archive and the portrait crop of existing material.
+
+Screenshots, reports and the rubric are in the local ignored `.taste-skill/living/` folder. The `review/` subfolder contains the final homepage contact sheets, and `qa/` includes the route sheets and six craft states.

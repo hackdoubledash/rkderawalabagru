@@ -1,84 +1,124 @@
-import Image from "next/image";
-import { CraftFaq } from "./components/craft-faq";
-import { CraftBook } from "./components/craft-book";
-import { DetailStudy } from "./components/detail-study";
-import { EnquiryPaths } from "./components/enquiry-paths";
-import { ProcessExplorer } from "./components/process-explorer";
-import { SiteFooter } from "./components/site-footer";
-import { SiteHeader } from "./components/site-header";
-import { categories, instagram, phone, whatsapp } from "./lib/site-data";
-
-const publicUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-const businessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "RK Derawala",
-  description: "Hand block printed textiles from Bagru, Rajasthan.",
-  image: publicUrl ? `${publicUrl}/media/workshop-printing.jpg` : undefined,
-  url: publicUrl && !publicUrl.includes("example.com") ? publicUrl : undefined,
-  telephone: phone,
-  address: { "@type": "PostalAddress", streetAddress: "Bypass Road, Meeno ka Mohalla", addressLocality: "Bagru", addressRegion: "Rajasthan", postalCode: "303007", addressCountry: "IN" },
-  sameAs: [instagram],
-};
+import Link from "next/link";
+import { BrandMark } from "./components/brand-mark";
+import { ArchiveGallery } from "./components/archive-gallery";
+import { CollectionIndex } from "./components/collection-index";
+import { CraftFilm } from "./components/craft-film";
+import { CraftScrollStory } from "./components/craft-scroll-story";
+import { ArrowLink, Picture, Print } from "./components/editorial";
+import { Recognition } from "./components/recognition";
+import { textileEntries } from "./lib/collections";
+import { craftStageImage, visible } from "./lib/site";
+import { photos, processSteps } from "./lib/site-data";
 
 export default function Home() {
+  const steps = processSteps.filter((step) => step.id !== "prepare" && step.id !== "wash")
+    .map((step) => ({ ...step, image: craftStageImage(step) }));
+  const material = visible(photos.detail) ? photos.detail : photos.repeat;
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
-      <a className="skip-link" href="#main">Skip to content</a>
-      <SiteHeader />
-      <main id="main">
-        <section className="hero" id="top" aria-labelledby="hero-title">
-          <div className="hero-media" aria-hidden="true">
-            <Image src="/video/bagru-block-printing-poster.jpg" alt="" fill fetchPriority="high" sizes="100vw" className="cover-image" />
-            <video autoPlay muted loop playsInline preload="metadata" poster="/video/bagru-block-printing-poster.jpg"><source src="/video/bagru-block-printing.mp4" type="video/mp4" /></video>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-picture"><Picture photo={photos.film} eager sizes="100vw" /></div>
+        <CraftFilm className="hero-film" mobileAutoplay={false} />
+        <div className="hero-scrim" />
+        <div className="hero-content frame">
+          <h1 id="hero-title"><span><span>A legacy</span></span><span><span>impressed by hand.</span></span></h1>
+          <p>RK Derawala’s hand block printed textiles from Bagru, Rajasthan.</p>
+          <div className="hero-actions">
+            <Link className="button button-paper" href="/our-story">Discover our story <span aria-hidden="true">↗</span></Link>
+            <Link className="text-link" href="/collections">Explore collections</Link>
           </div>
-          <div className="hero-copy">
-            <h1 id="hero-title">RK<br />Derawala</h1>
-            <div className="hero-summary"><p>Hand block printed textiles from Bagru, Rajasthan.</p><a className="action action-light" href="#story">Explore the craft</a></div>
+        </div>
+        <a className="hero-down" href="#story" aria-label="Scroll to the Bagru story">↓</a>
+      </section>
+
+      <section className="origin chapter" id="story" aria-labelledby="origin-title">
+        <div className="frame origin-grid">
+          <div>
+            <h2 id="origin-title" className="display-heading">Some stories<br />are printed.</h2>
+            <p>In Bagru, a pattern starts with the press of a carved wooden block. At RK Derawala, the same gesture carries from one impression to the next, across a length of cloth.</p>
+            <ArrowLink href="/our-story">The family in Bagru</ArrowLink>
           </div>
-        </section>
+          <Print photo={visible(photos.print) ? photos.print : photos.film} />
+        </div>
+      </section>
 
-        <section className="story" id="story" aria-labelledby="story-title">
-          <div className="story-hold"><h2 id="story-title">Bagru</h2><p>A carved block meets cloth, colour, and the practiced hand.</p></div>
-          <div className="story-pictures">
-            <figure className="story-picture story-picture-first"><Image src="/media/hand-printing.jpg" alt="Artisan placing a carved printing block on cloth" fill sizes="(max-width: 700px) 68vw, 30vw" className="cover-image" /><figcaption>Printing by hand</figcaption></figure>
-            <figure className="story-picture story-picture-second"><Image src="/media/indigo-drying.jpg" alt="Indigo printed cloth drying outdoors in Bagru" fill sizes="(max-width: 700px) 78vw, 42vw" className="cover-image" /><figcaption>Colour and sunlight</figcaption></figure>
-            <figure className="story-picture story-picture-third"><Image src="/media/printed-cloth-detail.jpg" alt="Close view of repeating hand block printed motifs" fill sizes="(max-width: 700px) 58vw, 24vw" className="cover-image" /><figcaption>Variations in the print</figcaption></figure>
+      <section className="print-table chapter" aria-labelledby="table-title">
+        <div className="frame print-table-grid">
+          <Print photo={photos.botanical} className="table-main art-study" />
+          <div className="table-copy">
+            <h2 id="table-title">Flower, leaf, repeat</h2>
+            <p>A single sprig can anchor a whole pattern. The spaces between impressions give each leaf and flower room to read.</p>
           </div>
-        </section>
+          <Print photo={visible(photos.detail) ? photos.detail : photos.repeat} className="table-detail" />
+        </div>
+      </section>
 
-        <section className="about section-pad" id="about" aria-labelledby="about-title">
-          <div className="about-heading"><h2 id="about-title">A family practice</h2><p>RK Derawala carries Bagru hand block printing through daily work with wood, cloth, natural colour, and Dabu mud resist.</p></div>
-          <div className="about-composition">
-            <figure className="about-photo"><Image src="/media/derawala-family.jpg" alt="Ram Kishore Chhipa seated with members of the Derawala family before indigo printed cloth" fill sizes="(max-width: 700px) 100vw, 64vw" className="cover-image" /></figure>
-            <div className="about-place"><strong>Bagru</strong><p>Bypass Road, Meeno ka Mohalla<br />Jaipur, Rajasthan</p></div>
+      <Recognition />
+
+      <section className="making chapter" id="process" aria-labelledby="making-title">
+        <div className="frame chapter-heading">
+          <h2 id="making-title">From block to cloth</h2>
+          <p>The print takes shape through carving, placement, resist and colour.</p>
+        </div>
+        <CraftScrollStory steps={steps} idPrefix="home" />
+        <div className="frame chapter-end"><ArrowLink href="/the-craft">Explore the full process</ArrowLink></div>
+      </section>
+
+      <section className="collection-chapter chapter" id="textiles" aria-labelledby="textile-title">
+        <div className="frame">
+          <div className="chapter-heading">
+            <h2 id="textile-title">Made to be lived with</h2>
+            <ArrowLink href="/collections">View collections</ArrowLink>
           </div>
-          <p className="about-note">Each repeat holds the pressure of a hand.</p>
-        </section>
+          <CollectionIndex entries={textileEntries} />
+        </div>
+      </section>
 
-        <section className="recognition section-pad" id="legacy" aria-labelledby="legacy-title">
-          <div className="recognition-intro"><h2 id="legacy-title">The artisan honoured</h2><p>These honours recognise Ram Kishore Chhipa (Derawala) and his contribution to hand block printing.</p></div>
-          <figure className="recognition-photo"><Image src="/media/padma-shri-ceremony.jpg" alt="Ram Kishore Chhipa receiving the Padma Shri at a formal ceremony" fill sizes="(max-width: 700px) 100vw, 40vw" className="cover-image" /><figcaption>Ram Kishore Chhipa at the Padma Shri ceremony</figcaption></figure>
-          <div className="recognition-list"><div><strong>2009</strong><span>Padma Shri</span></div><div><strong>1987</strong><span>National Award</span></div><a href="https://handmadeinrajasthan.rajasthan.gov.in/content/industries/handmadeinrajasthandepartment/mastercrafts/padmaawardees/list/ramkishorechhipa.html" target="_blank" rel="noopener noreferrer">Read the Rajasthan government artisan profile</a></div>
-        </section>
+      <section className="material chapter" id="detail" aria-labelledby="material-title">
+        <div className="frame material-grid">
+          <div>
+            <h2 id="material-title">Look closer</h2>
+            <p>Find where the edge of one impression meets the next. The same block makes marks that differ slightly each time.</p>
+          </div>
+          <ArchiveGallery images={[material]} layout="macro" />
+        </div>
+      </section>
 
-        <section className="making section-pad" id="process" aria-labelledby="process-title"><div className="section-heading"><h2 id="process-title">From block to cloth</h2><p>Select a moment to see how the print takes shape.</p></div><ProcessExplorer /></section>
+      <section className="family-chapter chapter" id="about" aria-labelledby="family-title">
+        <div className="frame family-grid">
+          {visible(photos.family) ? <Print photo={photos.family} /> : <div className="family-mark"><BrandMark size={208} /></div>}
+          <div>
+            <h2 id="family-title">A family practice</h2>
+            <p>Cloth, tools and people at work come together in the Derawala family’s archive. The practice continues in the daily decisions made at the printing table.</p>
+            <ArrowLink href="/our-story">Meet the Derawala family</ArrowLink>
+          </div>
+        </div>
+      </section>
 
-        <section className="textiles section-pad" id="textiles" aria-labelledby="textiles-title">
-          <div className="section-heading"><h2 id="textiles-title">The textiles</h2><p>Explore four forms of cloth, then ask the workshop what is currently available.</p></div>
-          <div className="textile-gallery">{categories.map((category, index) => <a className={`textile-piece textile-piece-${index + 1}`} href={`/textiles/${category.slug}`} key={category.slug}><figure><Image src={category.image} alt={category.alt} fill sizes="(max-width: 700px) 88vw, 42vw" className="cover-image" /></figure><div><h3>{category.name}</h3><span>View textile</span></div></a>)}</div>
-        </section>
+      <section className="pathways chapter" id="enquiries" aria-labelledby="pathways-title">
+        <div className="frame">
+          <div className="chapter-heading"><h2 id="pathways-title">Start a conversation</h2><p>Tell the workshop what you’re looking for.</p></div>
+          <div className="pathway-list">
+            <div><ArrowLink href="/contact#enquiry">Find a piece</ArrowLink><p>Ask what’s available or request a closer view.</p></div>
+            <div><ArrowLink href="/trade">Discuss a collaboration</ArrowLink><p>Share a brief for a studio, boutique or interiors project.</p></div>
+            <div><ArrowLink href="/trade?audience=international#enquiry">International enquiry</ArrowLink><p>Include your location and ask about delivery options.</p></div>
+          </div>
+          <div className="chapter-end" id="contact"><ArrowLink href="/contact">Contact and directions</ArrowLink></div>
+        </div>
+      </section>
 
-        <DetailStudy />
-        <section className="journal section-pad" id="journal" aria-labelledby="journal-title"><div className="section-heading"><h2 id="journal-title">The craft journal</h2><p>Turn the pages to follow the tools, colour, and cloth.</p></div><CraftBook /></section>
-        <EnquiryPaths />
-
-        <section className="contact section-pad" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Begin with the cloth</h2><p>Ask about a piece, a project, or a visit to the Bagru workshop.</p><div className="contact-photo"><Image src="/media/red-textile.jpg" alt="Red floral hand printed textile hanging outdoors" fill sizes="(max-width: 700px) 28vw, 12vw" className="cover-image" /></div><div className="contact-links"><a className="action" href={whatsapp} target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a><a href={`tel:${phone}`}>Call +91 98290 65347</a><a href={instagram} target="_blank" rel="noopener noreferrer">See the Instagram archive</a></div></section>
-
-        <CraftFaq />
-      </main>
-      <SiteFooter />
+      <section className="journal-band" id="journal" aria-labelledby="journal-band-title">
+        <div className="frame journal-band-grid">
+          <div>
+            <h2 id="journal-band-title">Notes from the archive</h2>
+            <p>Read about the marks, materials and methods behind Bagru printed cloth.</p>
+            <ArrowLink href="/journal">Read the journal</ArrowLink>
+          </div>
+          <Print photo={photos.garden} className="garden-plate" caption={false} />
+        </div>
+      </section>
+      <div id="questions" className="frame legacy-anchor"><Link className="text-link" href="/contact#questions">Questions about enquiries and visits</Link></div>
     </>
   );
 }

@@ -1,94 +1,150 @@
 {
-  "note": "V6 uses locally stored, temporary RK Derawala Instagram renditions and a credited Bagru craft film. Replace them with approved brand originals when supplied. The film depicts a separate Bagru workshop, not RK Derawala.",
+  "note": "Living Archive media. See ASSET_MANIFEST.md for placement and permission status.",
   "assets": [
     {
       "file": "/video/bagru-block-printing.mp4",
-      "poster": "/video/bagru-block-printing-poster.jpg",
+      "poster": "/video/bagru-impression.jpg",
       "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
       "creator": "Incredible India",
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-      "modifications": "A 15-second excerpt beginning around 00:48 was trimmed, muted, resized to 1280 pixels wide and encoded to H.264 MP4. Poster extracted around 00:56.",
+      "modifications": "A 15-second excerpt beginning around 00:48 was trimmed, muted, resized to 1280 pixels wide and encoded to H.264 MP4. Still frames were taken at 3, 6, 9 and 12 seconds of the excerpt.",
       "description": "Documentary footage of hand block printing in Bagru. It shows a separate workshop and is not footage of RK Derawala.",
-      "usedFor": "Home hero and textile category film band",
+      "usedFor": "Home hero, The Craft and four licensed stills",
       "replaceWithOriginal": true
     },
     {
-      "file": "/media/red-textile.jpg",
+      "file": "/archive-media/red-textile.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DXWxR6fiVEy/",
       "description": "Red printed textile hanging among leaves",
-      "usedFor": "Sarees gallery and category page; contact image",
-      "replaceWithOriginal": true
+      "usedFor": "Home print table, collection banner, saree and dupatta archive and contact",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/derawala-family.jpg",
+      "file": "/archive-media/derawala-family.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/p/C5qOO55SAPu/",
       "description": "Ram Kishore Chhipa with family members before indigo printed cloth",
-      "usedFor": "About mosaic, craft journal, textile category pages and international enquiry panel",
-      "replaceWithOriginal": true
+      "usedFor": "Home and story portrait and gallery",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/workshop-printing.jpg",
+      "file": "/archive-media/workshop-printing.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DON9j5dkR6j/",
       "description": "Person hand printing a striped pattern in the workshop",
-      "usedFor": "Process, project enquiry and textile category pages",
-      "replaceWithOriginal": true
+      "usedFor": "Home origin, story, process, trade, fabric archive",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/padma-shri-ceremony.jpg",
+      "file": "/archive-media/padma-shri-ceremony.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/p/C9mlWExSHLb/",
       "description": "Padma Shri award ceremony image shared by RK Derawala",
-      "usedFor": "Artisan recognition section",
-      "replaceWithOriginal": true
+      "usedFor": "Recognition chapter and story archive",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/printed-textile.jpg",
+      "file": "/archive-media/printed-textile.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DYUObvFRo3u/",
       "description": "Earth-toned printed textile against a stone wall",
-      "usedFor": "Fabrics gallery, category pages, process and personal enquiry",
-      "replaceWithOriginal": true
+      "usedFor": "Print table, process, collection archive and journal",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/printed-cloth-detail.jpg",
+      "file": "/archive-media/printed-cloth-detail.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DOVfTxLkVVC/",
       "description": "Multiple hand block printed motifs on pale cloth",
-      "usedFor": "Bagru story, stoles gallery, category pages, detail study and craft journal",
-      "replaceWithOriginal": true
+      "usedFor": "Print table, material viewer, process, collection archive and journal",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/floral-archive.jpg",
+      "file": "/archive-media/floral-archive.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/p/C7ZC-fGSKCT/",
       "description": "Floral printed textile beneath an open craft publication",
-      "usedFor": "Dupattas gallery, category pages and questions section",
-      "replaceWithOriginal": true
+      "usedFor": "Dupatta gallery and textile index",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/instagram-logo.jpg",
-      "source": "https://www.instagram.com/rkderawala_bagru/",
-      "description": "Public profile image, floral identity mark",
-      "usedFor": "Header, loader and favicon",
-      "replaceWithOriginal": true
-    },
-    {
-      "file": "/media/printing-blocks.jpg",
+      "file": "/archive-media/printing-blocks.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DWYxGp0CTgq/",
       "description": "Reel cover showing wooden printing blocks, including Instagram play overlay",
-      "usedFor": "Process, craft journal and questions section",
-      "replaceWithOriginal": true
+      "usedFor": "Private archive only. The preview uses a licensed contextual still.",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/hand-printing.jpg",
+      "file": "/archive-media/hand-printing.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/reel/DX6qfSFs-G2/",
       "description": "Reel cover showing hands printing cloth, including Instagram play overlay",
-      "usedFor": "Bagru story",
-      "replaceWithOriginal": true
+      "usedFor": "Private archive only.",
+      "replaceWithOriginal": true,
+      "approval": "pending"
     },
     {
-      "file": "/media/indigo-drying.jpg",
+      "file": "/archive-media/indigo-drying.jpg",
       "source": "https://www.instagram.com/rkderawala_bagru/p/DW1O2bxEa1K/",
       "description": "Indigo printed cloth outdoors; original thumbnail includes embedded text",
-      "usedFor": "Bagru story, process and craft journal",
-      "replaceWithOriginal": true
+      "usedFor": "The Craft wash-and-dry chapter",
+      "replaceWithOriginal": true,
+      "approval": "pending"
+    },
+    {
+      "file": "/video/bagru-impression.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
+      "creator": "Incredible India",
+      "license": "CC BY 3.0",
+      "description": "Hands pressing a wooden block into striped cloth",
+      "approval": "licensed"
+    },
+    {
+      "file": "/video/bagru-blocks-and-printer.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
+      "creator": "Incredible India",
+      "license": "CC BY 3.0",
+      "description": "Printer beside shelves of printing blocks",
+      "approval": "licensed"
+    },
+    {
+      "file": "/video/bagru-worktable.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
+      "creator": "Incredible India",
+      "license": "CC BY 3.0",
+      "description": "Printer working across a long printing table",
+      "approval": "licensed"
+    },
+    {
+      "file": "/video/bagru-striped-repeat.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockprinting_in_Bagru_-_India.webm",
+      "creator": "Incredible India",
+      "license": "CC BY 3.0",
+      "description": "Striped impressions across cloth beside hands",
+      "approval": "licensed"
+    },
+    {
+      "file": "/brand/rk-derawala-logo.jpg",
+      "source": "Client-supplied high-resolution logo",
+      "description": "Floral identity on parchment",
+      "usedFor": "Shared header, mobile menu, footer, favicon and social preview",
+      "approval": "approved"
+    },
+    {
+      "file": "/art/bagru-garden-border.jpg",
+      "source": "Client-supplied botanical and architectural artwork",
+      "description": "Printed garden border and architectural engraving",
+      "usedFor": "Home journal feature, journal title and social preview",
+      "approval": "approved"
+    },
+    {
+      "file": "/art/floral-block-study.webp",
+      "source": "Built-in OpenAI image generation",
+      "description": "Editorial illustration of a dominant floral sprig with a supporting jali fragment",
+      "usedFor": "Home print-table feature",
+      "approval": "approved"
     }
   ]
 }

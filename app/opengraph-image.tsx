@@ -1,31 +1,26 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { brand } from "./lib/brand";
 
+export const alt = "RK Derawala. Hand block printed textiles from Bagru, Rajasthan.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "RK Derawala — Hand block printing from Bagru, Rajasthan";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const [logo, art] = await Promise.all([
+    readFile(new URL("../public/brand/rk-derawala-logo.jpg", import.meta.url)),
+    readFile(new URL("../public/art/bagru-garden-border.jpg", import.meta.url)),
+  ]);
   return new ImageResponse(
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        background: "#f8f1e8",
-        color: "#1e173c",
-        padding: "62px 72px",
-        border: "20px solid #e5d5c3",
-      }}
-    >
-      <div style={{ fontSize: 24, letterSpacing: 8, textTransform: "uppercase" }}>Bagru · Rajasthan</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-        <div style={{ fontFamily: "Georgia", fontSize: 100, lineHeight: 1 }}>RK Derawala</div>
-        <div style={{ fontFamily: "Georgia", fontSize: 44, fontStyle: "italic" }}>Printed by hand. Held in memory.</div>
+    <div style={{ display: "flex", width: "100%", height: "100%", background: brand.ink, color: brand.ivory }}>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", width: 610, padding: 62 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={`data:image/jpeg;base64,${logo.toString("base64")}`} width={112} height={112} alt="" style={{ borderRadius: 56 }} />
+        <div style={{ fontSize: 73, lineHeight: 1.02, letterSpacing: -4, marginTop: 26 }}>RK Derawala</div>
+        <div style={{ fontSize: 27, marginTop: 22 }}>Hand block printed textiles from Bagru, Rajasthan.</div>
       </div>
-      <div style={{ fontSize: 24, letterSpacing: 3, textTransform: "uppercase" }}>Hand block printed textiles</div>
-    </div>,
-    size,
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={`data:image/jpeg;base64,${art.toString("base64")}`} width={590} height={630} alt="" style={{ objectFit: "cover", objectPosition: "right center" }} />
+    </div>, size,
   );
 }
