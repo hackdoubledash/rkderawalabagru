@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Photo } from "../lib/site-data";
@@ -44,7 +45,7 @@ export function ArrowLink({ href, children, className = "" }: {
   children: React.ReactNode;
   className?: string;
 }) {
-  return <Link href={href} className={`arrow-link ${className}`}>{children}<span aria-hidden="true">↗</span></Link>;
+  return <Link href={href} className={`arrow-link ${className}`}>{children}<ArrowUpRight aria-hidden="true" /></Link>;
 }
 
 export function PageTitle({ title, description, photo, children, variant = "" }: {

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArrowLink, Breadcrumbs, PageTitle } from "../../components/editorial";
 import { publishedArticles } from "../../lib/journal";
@@ -31,7 +32,7 @@ export default async function Article({ params }: Props) {
             <h2>{title}</h2>
             {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </section>)}
-          <p><a className="text-link" href={article.source.url}>{article.source.name} ↗</a></p>
+          <p><a className="text-link" href={article.source.url}>{article.source.name} <ArrowUpRight aria-hidden="true" /></a></p>
           <ArrowLink href="/journal">All journal essays</ArrowLink>
         </div>
       </article>

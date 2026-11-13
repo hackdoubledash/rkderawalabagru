@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { CollectionIndex } from "../components/collection-index";
 import { Breadcrumbs, PageTitle, Print } from "../components/editorial";
@@ -13,7 +14,7 @@ export default function Collections() {
     <>
       <Breadcrumbs items={[{ name: "Collections" }]} />
       <PageTitle title="Collections" description={description} variant="collections-title">
-        <Link href="/collections/textiles" className="button">Explore textiles <span aria-hidden="true">↗</span></Link>
+        <Link href="/collections/textiles" className="button">Explore textiles <ArrowUpRight aria-hidden="true" /></Link>
       </PageTitle>
       <div className="collection-banner"><Print photo={visible(photos.red) ? photos.red : photos.film} caption={false} /></div>
       <section className="chapter frame" aria-labelledby="cloth-title">

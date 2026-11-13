@@ -1,3 +1,4 @@
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { BrandMark } from "./components/brand-mark";
 import { ArchiveGallery } from "./components/archive-gallery";
@@ -18,24 +19,26 @@ export default function Home() {
   return (
     <>
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-picture"><Picture photo={photos.film} eager sizes="100vw" /></div>
-        <CraftFilm className="hero-film" mobileAutoplay={false} />
-        <div className="hero-scrim" />
-        <div className="hero-content frame">
-          <h1 id="hero-title"><span><span>A legacy</span></span><span><span>impressed by hand.</span></span></h1>
-          <p>RK Derawala’s hand block printed textiles from Bagru, Rajasthan.</p>
-          <div className="hero-actions">
-            <Link className="button button-paper" href="/our-story">Discover our story <span aria-hidden="true">↗</span></Link>
-            <Link className="text-link" href="/collections">Explore collections</Link>
+        <div className="hero-copy">
+          <div className="hero-content">
+            <h1 id="hero-title"><span><span>A legacy</span></span><span><span>impressed</span></span><span><span>by hand.</span></span></h1>
+            <p>RK Derawala’s hand block printed textiles from Bagru, Rajasthan.</p>
+            <div className="hero-actions">
+              <Link className="button button-paper" href="/collections">Explore collections <ArrowUpRight aria-hidden="true" /></Link>
+              <a className="text-link hero-scroll" href="#story">Discover Bagru <ArrowDown aria-hidden="true" /></a>
+            </div>
           </div>
         </div>
-        <a className="hero-down" href="#story" aria-label="Scroll to the Bagru story">↓</a>
+        <div className="hero-media">
+          <div className="hero-picture"><Picture photo={photos.film} eager sizes="(max-width: 720px) 100vw, 58vw" /></div>
+          <CraftFilm className="hero-film" mobileAutoplay={false} />
+        </div>
       </section>
 
       <section className="origin chapter" id="story" aria-labelledby="origin-title">
         <div className="frame origin-grid">
           <div>
-            <h2 id="origin-title" className="display-heading">Some stories<br />are printed.</h2>
+            <h2 id="origin-title" className="display-heading">From Bagru,<br />by hand.</h2>
             <p>In Bagru, a pattern starts with the press of a carved wooden block. At RK Derawala, the same gesture carries from one impression to the next, across a length of cloth.</p>
             <ArrowLink href="/our-story">The family in Bagru</ArrowLink>
           </div>
@@ -43,18 +46,18 @@ export default function Home() {
         </div>
       </section>
 
+      <Recognition />
+
       <section className="print-table chapter" aria-labelledby="table-title">
         <div className="frame print-table-grid">
-          <Print photo={photos.botanical} className="table-main art-study" />
           <div className="table-copy">
             <h2 id="table-title">Flower, leaf, repeat</h2>
             <p>A single sprig can anchor a whole pattern. The spaces between impressions give each leaf and flower room to read.</p>
           </div>
+          <Print photo={photos.botanical} className="table-main art-study" />
           <Print photo={visible(photos.detail) ? photos.detail : photos.repeat} className="table-detail" />
         </div>
       </section>
-
-      <Recognition />
 
       <section className="making chapter" id="process" aria-labelledby="making-title">
         <div className="frame chapter-heading">

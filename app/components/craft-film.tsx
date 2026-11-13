@@ -1,5 +1,6 @@
 "use client";
 
+import { Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export function CraftFilm({ className = "", mobileAutoplay = true }: { className?: string; mobileAutoplay?: boolean }) {
@@ -73,7 +74,7 @@ export function CraftFilm({ className = "", mobileAutoplay = true }: { className
       <video ref={player} muted playsInline loop preload="none" poster="/video/bagru-impression.jpg" aria-hidden="true"
         className={hasFrame ? "has-frame" : ""} onPlaying={() => { setHasFrame(true); setPlaying(true); }} onPause={() => setPlaying(false)} />
       <button type="button" className="film-control" onClick={toggle}>
-        <span aria-hidden="true">{playing ? "Ⅱ" : "▷"}</span> {playing ? "Pause film" : "Play film"}
+        {playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />} {playing ? "Pause film" : "Play film"}
       </button>
     </div>
   );

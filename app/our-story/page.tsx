@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { ArchiveGallery } from "../components/archive-gallery";
 import { ArrowLink, Breadcrumbs, PageTitle, Print } from "../components/editorial";
 import { Recognition } from "../components/recognition";
@@ -19,7 +20,7 @@ export default function OurStory() {
         <div>
           <p>In Bagru, west of Jaipur, printed cloth is part of the town’s working life. The pattern begins with a carved block and takes shape on a long printing table. The placement of each impression is judged by hand.</p>
           <p>The Rajasthan artisan directory records Ram Kishore Chhipa’s work in hand block printing. His recognition belongs to that practice, from the making of a motif to the finished length of cloth.</p>
-          <a className="text-link" href={artisan}>Read the artisan profile ↗</a>
+          <a className="text-link" href={artisan}>Read the artisan profile <ArrowUpRight aria-hidden="true" /></a>
         </div>
       </section>
       <Recognition full />

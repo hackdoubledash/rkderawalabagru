@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { enquiryUrl, whatsapp } from "../lib/site-data";
 
@@ -77,7 +78,7 @@ export function InquiryForm({ audience = "individual", collection = "", collecti
         <textarea name="details" rows={4} maxLength={800} onInput={(event) => event.currentTarget.setCustomValidity("")} required />
       </label>
       <div className="form-action wide">
-        <button className="button" type="submit">Continue in WhatsApp <span aria-hidden="true">↗</span></button>
+        <button className="button" type="submit">Continue in WhatsApp <ArrowUpRight aria-hidden="true" /></button>
         <p id="inquiry-privacy">Review your draft in WhatsApp before sending. This website doesn’t store these details.</p>
         <noscript><p><a href={whatsapp}>Open WhatsApp directly</a></p></noscript>
       </div>

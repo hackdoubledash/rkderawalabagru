@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArchiveGallery } from "../../../components/archive-gallery";
@@ -37,7 +38,7 @@ export default async function TextileDetail({ params }: Props) {
         { name: category.name },
       ]} />
       <PageTitle title={category.name} description={category.description} photo={category.image} variant={`textile-hero hero-${category.layout}`}>
-        <Link className="button" href={contact}>Ask about {category.name.toLowerCase()} <span aria-hidden="true">↗</span></Link>
+        <Link className="button" href={contact}>Ask about {category.name.toLowerCase()} <ArrowUpRight aria-hidden="true" /></Link>
       </PageTitle>
       <section className={`chapter frame editorial-reading reading-${category.layout}`} aria-labelledby="textile-story">
         <h2 id="textile-story">{category.heading}</h2>
@@ -54,8 +55,8 @@ export default async function TextileDetail({ params }: Props) {
         <div><p>{category.enquiry}</p><ArrowLink href={contact}>Ask about {category.name.toLowerCase()}</ArrowLink></div>
       </section>
       <nav className="collection-neighbours frame" aria-label="Other textile collections">
-        <Link href={`/collections/textiles/${previous.slug}`} aria-label={`Previous collection: ${previous.name}`}>← {previous.name}</Link>
-        <Link href={`/collections/textiles/${next.slug}`} aria-label={`Next collection: ${next.name}`}>{next.name} →</Link>
+        <Link href={`/collections/textiles/${previous.slug}`} aria-label={`Previous collection: ${previous.name}`}><ArrowLeft aria-hidden="true" /> {previous.name}</Link>
+        <Link href={`/collections/textiles/${next.slug}`} aria-label={`Next collection: ${next.name}`}>{next.name} <ArrowRight aria-hidden="true" /></Link>
       </nav>
     </>
   );

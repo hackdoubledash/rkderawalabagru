@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { ArchiveGallery } from "../components/archive-gallery";
 import { CraftFilm } from "../components/craft-film";
 import { CraftScrollStory } from "../components/craft-scroll-story";
@@ -32,8 +33,8 @@ export default function Craft() {
         </div>
         <CraftScrollStory steps={steps} idPrefix="craft" />
         <div className="frame chapter-end inline-links">
-          <a href={craftSource} className="text-link">Hand block printing source ↗</a>
-          <a href={dabuSource} className="text-link">Dabu process source ↗</a>
+          <a href={craftSource} className="text-link">Hand block printing source <ArrowUpRight aria-hidden="true" /></a>
+          <a href={dabuSource} className="text-link">Dabu process source <ArrowUpRight aria-hidden="true" /></a>
         </div>
       </section>
       <section className="frame chapter film-chapter" aria-labelledby="film-title">

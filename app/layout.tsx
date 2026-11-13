@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { PrintReveals } from "./components/print-reveals";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { pageMetadata, publicUrl } from "./lib/site";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   robots: { index: Boolean(publicUrl), follow: Boolean(publicUrl) },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: brand.paper };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: brand.paper };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const organisation = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <PrintReveals />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organisation).replace(/</g, "\\u003c") }} />
       </body>
     </html>

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { ArrowLink, Breadcrumbs, PageTitle, Print } from "../components/editorial";
 import { InquiryForm } from "../components/inquiry-form";
 import { textileOptions } from "../lib/collections";
@@ -22,9 +23,9 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
             <address>{address}</address>
             <ul>
               <li><a className="text-link" href={`tel:${phone}`}>{phoneLabel}</a></li>
-              <li><a className="text-link" href={whatsapp}>Open WhatsApp ↗</a></li>
-              <li><a className="text-link" href={directions}>Get directions ↗</a></li>
-              <li><a className="text-link" href={instagram}>Instagram ↗</a></li>
+              <li><a className="text-link" href={whatsapp}>Open WhatsApp <ArrowUpRight aria-hidden="true" /></a></li>
+              <li><a className="text-link" href={directions}>Get directions <ArrowUpRight aria-hidden="true" /></a></li>
+              <li><a className="text-link" href={instagram}>Instagram <ArrowUpRight aria-hidden="true" /></a></li>
             </ul>
             <Print photo={photos.red} caption={false} />
           </div>

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { ArrowLink, Print } from "./editorial";
 import { visible } from "../lib/site";
 import { artisan, padma, photos } from "../lib/site-data";
@@ -15,7 +16,7 @@ export function Recognition({ full = false }: { full?: boolean }) {
             <div><dt>National Award</dt><dd>1987</dd></div>
           </dl>
           <div className="inline-links">
-            <a className="text-link" href={artisan}>Rajasthan artisan profile ↗</a>
+            <a className="text-link" href={artisan}>Rajasthan artisan profile <ArrowUpRight aria-hidden="true" /></a>
             {!full && <ArrowLink href="/our-story">Read his story</ArrowLink>}
           </div>
         </div>

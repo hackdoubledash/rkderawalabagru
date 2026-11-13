@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import type { Photo } from "../lib/site-data";
@@ -32,7 +33,7 @@ export function ArchiveGallery({ images, layout = "length" }: { images: readonly
                 dialog.current?.showModal();
               }}>
               <Image src={item.src} alt={item.alt} fill sizes="(max-width: 720px) 92vw, 49vw" style={{ objectPosition: item.position }} />
-              <span aria-hidden="true" className="gallery-expand">＋</span>
+              <span aria-hidden="true" className="gallery-expand"><Maximize2 aria-hidden="true" /></span>
             </button>
             <figcaption>{item.caption}</figcaption>
           </figure>
@@ -46,10 +47,10 @@ export function ArchiveGallery({ images, layout = "length" }: { images: readonly
           if (event.key === "ArrowRight") { event.preventDefault(); step(1); }
         }}>
         <div className="gallery-controls">
-          <button onClick={() => dialog.current?.close()} autoFocus>Close ×</button>
+          <button onClick={() => dialog.current?.close()} autoFocus>Close <X aria-hidden="true" /></button>
           {images.length > 1 && <>
-            <button onClick={() => step(-1)} aria-label="Previous photo">←</button>
-            <button onClick={() => step(1)} aria-label="Next photo">→</button>
+            <button onClick={() => step(-1)} aria-label="Previous photo"><ArrowLeft aria-hidden="true" /></button>
+            <button onClick={() => step(1)} aria-label="Next photo"><ArrowRight aria-hidden="true" /></button>
           </>}
           <button onClick={() => setZoom(!zoom)} aria-pressed={zoom}>{zoom ? "Fit image" : "Zoom in"}</button>
         </div>
